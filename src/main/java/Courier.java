@@ -47,10 +47,6 @@ public class Courier {
     public static Courier getWithFirstNameOnly() {
         return new Courier().setFirstName(RandomStringUtils.randomAlphabetic (10));
     }
-
-    //public static Courier getWithPasswordAndLogin() {
-       // return new Courier (RandomStringUtils.randomAlphabetic (10), RandomStringUtils.randomAlphabetic (10), null);
-    //}
 }
 
 

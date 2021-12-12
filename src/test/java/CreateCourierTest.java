@@ -48,7 +48,6 @@ public class CreateCourierTest extends RestAssuredClient {
     public void courierSameNotCreationTest() {
         courierClient.create(courier);
         ValidatableResponse login = courierClient.login(CourierCredentials.from(courier));
-        //courierId = login.extract().path( "id");
         courierId = courierClient.login(CourierCredentials.from(courier)).extract().path("id");
         ValidatableResponse response = courierClient.create(courier);
         int statusCode = response.extract().statusCode();
